@@ -6,7 +6,7 @@ const App = () => {
   return (
     <View>
       <Stack.Screen options={{ title: 'Home' }} />
-      <Text>Hello</Text>
+      <Text>Hello Alim</Text>
     </View>
   );
 };

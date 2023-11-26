@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "StudentTracker",
+    "slug": "StudentTracker",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "myapp",
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff",
+        "blockedPermissions": ["android.permission.INTERNET"]
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

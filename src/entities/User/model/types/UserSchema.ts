@@ -1,4 +1,8 @@
+import { User } from './User.ts';
+
 export type UserSchema = {
-  isLoggedIn: boolean;
   isAuth: boolean;
+  accessToken?: string;
+  refreshToken?: string;
+  user?: User;
 };

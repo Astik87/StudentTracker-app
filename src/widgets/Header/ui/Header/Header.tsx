@@ -5,6 +5,8 @@ import { DrawerToggleButton } from '@react-navigation/drawer';
 
 import { HeaderProps } from '../../types/HeaderProps';
 
+import { UserAvatar } from '@/entities/User';
+
 const Header: FC<HeaderProps> = ({ headerBackVisible, title }) => {
   const navigation = useNavigation();
   const theme = useTheme();
@@ -19,6 +21,7 @@ const Header: FC<HeaderProps> = ({ headerBackVisible, title }) => {
         <DrawerToggleButton tintColor={theme.colors.onBackground} />
       )}
       <Appbar.Content title={title} />
+      <UserAvatar />
     </Appbar.Header>
   );
 };

@@ -9,7 +9,8 @@ import {
 import { Drawer } from 'expo-router/drawer';
 import { ThemeProvider, DefaultTheme } from '@react-navigation/native';
 
-import { StoreProvider } from './providers/StoreProvider';
+import { StoreProvider, store } from './providers/StoreProvider';
+import { InitAppProvider } from './providers/InitAppProvider';
 
 import { Header } from '@/widgets/Header';
 
@@ -39,16 +40,18 @@ const App = () => {
     <PaperProvider theme={theme}>
       <StoreProvider>
         <ThemeProvider value={navigationTheme}>
-          <Drawer
-            screenOptions={{
-              header: ({ options, route }) => (
-                <Header
-                  headerBackVisible={false}
-                  title={options.title ?? route.name}
-                />
-              ),
-            }}
-          />
+          <InitAppProvider reduxStore={store}>
+            <Drawer
+              screenOptions={{
+                header: ({ options, route }) => (
+                  <Header
+                    headerBackVisible={false}
+                    title={options.title ?? route.name}
+                  />
+                ),
+              }}
+            />
+          </InitAppProvider>
         </ThemeProvider>
       </StoreProvider>
     </PaperProvider>
